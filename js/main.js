@@ -4,12 +4,12 @@
 
   //function for slider auto
  var   k=-1;
-
+var f=document.getElementsByTagName('figure');
  function play()
 
 {
 	    
-	    var f=document.getElementsByTagName('figure');
+	    
 	    for( j=0; j<f.length; j++)
 	    {
 	    	f[j].classList.add("hid");
@@ -24,7 +24,7 @@
      
          	   f[k].classList.remove("hid");
          	   f[k].classList.add("visible");
-         	   setTimeout(function(){ f[k].img.classList.add("anim");},500);
+         	   // setTimeout(function(){ f[k].img.classList.add("anim");},500);
          	   f[k].style.border="2px solid black";
          	   
         
@@ -36,5 +36,43 @@
 
  
 
-setInterval(function(){ play();},2000);
-document.getElementById("myBtn").addEventListener("click", myFunction);
+var intplay=setInterval(function(){ play();},2000);
+document.getElementById("butnext").addEventListener("click", suivant);
+document.getElementById("butprec").addEventListener("click", precedant);
+function suivant()
+{
+     clearInterval(intplay);
+     f[k].classList.add('hid');
+     f[k].classList.remove('visible');
+    
+      if(k<f.length-1)
+      	{ k++;}
+	  else
+	  	{k=0;}
+
+
+   f[k].classList.remove("hid");
+   f[k].classList.add('visible');
+   // console.log(k);
+
+}
+
+function precedant()
+{
+     clearInterval(intplay);
+     f[k].classList.add('hid');
+     f[k].classList.remove('visible');
+    
+      if(k>0)
+      	{ k--;}
+	  else
+	  	{k=f.length-1;}
+        
+   
+   
+
+   f[k].classList.remove("hid");
+   f[k].classList.add('visible');
+   // console.log(k);
+
+}
