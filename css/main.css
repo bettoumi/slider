@@ -130,16 +130,16 @@ textarea {
     box-shadow: 2px 3px 1px grey;
     
 }
-@keyframes sort {
+/*@keyframes sort {
     from {transform: rotateX(0deg)}
-    to { transform: rotateX(15deg);}
+    to { transform: rotateX(-10deg);}
 }
 .anim
 {
    animation:sort 0.5s ;
     animation-duration: 0.5ws;
    animation-direction: alternate;
-}
+}*/
 
 
 .fig img

@@ -24,7 +24,7 @@ var f=document.getElementsByTagName('figure');
      
          	   f[k].classList.remove("hid");
          	   f[k].classList.add("visible");
-         	   // setTimeout(function(){ f[k].img.classList.add("anim");},500);
+         	    // setTimeout(function(){ f[k].classList.add("anim");},500);
          	   f[k].style.border="2px solid black";
          	   
         
